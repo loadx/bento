@@ -1,0 +1,1 @@
+../.debian_6/sudoers.sh
