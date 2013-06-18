@@ -7,42 +7,52 @@ These basebox definitions are originally based on
 make "Don't Repeat Yourself" (DRY) modular baseboxes. Thanks Tim!
 
 ## Current Baseboxes
-debian-6.0.0 (i386) 	
-debian-7.0.0 (i386)
-debian-7.0.0 (x64)
-ubuntu-12.04 (x64)
+
+* debian-6.0.0 (i386)
+* debian-7.0.0 (i386)
+* debian-7.0.0 (x64)
+* ubuntu-12.04 (x64)
 
 # Getting Started
 
 First, clone the project, then install the required Gems with Bundler.
-
+```bash
     $ git clone git://github.com/opscode/bento.git
     $ cd bento
     $ bundle install --path=.gems
+```
 
 Next install Polipo using your favorite package manager or from source
+```bash
    $ brew -v install polipo
+```
 
 Customise polipo's config to your choosing. 
-** You should leave the port as the default 8123. If you do want to change it
-you will need to update the preseed values to indicate this change **
+
+**_You should leave the port as the default 8123_**
+<br /><em>If you want to change this you will need to update the preseed values accordingly</em>
+
 
 Now start polipo
+```bash
     $ polipo -c /path/to/your/config
+```
 
 Back in Bento
 List available baseboxes that can be built:
-
+```bash
     $ bundle exec veewee list
+```
 
 Build, for example, the debian-7.0.0 basebox.
-
+```bash
     $ bundle exec veewee build debian-7.0.0
-
+```
 
 Aside from that, the basebox should be ready to use. Export it:
-
+```bash
     $ bundle exec veewee export debian-7.0.0
+```
 
 Congratulations! You now have `./debian7.0.0.box`, a fully functional
 basebox that you can then add to Vagrant and start testing cookbooks.
