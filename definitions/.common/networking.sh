@@ -1,7 +1,7 @@
 #!/bin/bash -eux
 
-if [-f /etc/udev/rules.d/70-persistent-net.rules ]; then
-    rm /etc/udev/rules.d/70-persistent-net.rules
+if [ -f /etc/udev/rules.d/70-persistent-net.rules ]; then
+    rm -rf /etc/udev/rules.d/70-persistent-net.rules
 fi
 
 mkdir /etc/udev/rules.d/70-persistent-net.rules
