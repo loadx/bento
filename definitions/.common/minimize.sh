@@ -21,6 +21,9 @@ apt-get -y --purge remove xserver-common xserver-xorg xserver-xorg-core mutt w3m
 # remove unused libs
 apt-get -y --purge remove x11-common x11-xkb-utils xfonts-base xfonts-encodings xfonts-utils xfonts-utils xfonts-base language-pack-gnome-en language-pack-gnome-en-base libx11-6 libx11-data
 
+# remove unused kernels
+dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y remove --purge
+
 # cleanup unused pkgs
 apt-get -y autoremove
 
