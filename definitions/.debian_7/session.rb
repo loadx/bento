@@ -22,7 +22,6 @@ DEBIAN_7_SESSION =
                          :postinstall_files => [ "update.sh", 
                                                  "sbin_fix.sh",
                                                  "virtualbox.sh",
-                                                 #"chef-client.sh",
                                                  "vagrant.sh",
                                                  "networking.sh",
                                                  "sudoers.sh",

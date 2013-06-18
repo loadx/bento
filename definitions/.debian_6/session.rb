@@ -21,7 +21,6 @@ DEBIAN_SESSION =
                          :os_type_id => 'Debian_64',
                          :postinstall_files => [ "update.sh",
                                                  "virtualbox.sh",
-                                                 "chef-client.sh",
                                                  "vagrant.sh",
                                                  "networking.sh",
                                                  "sudoers.sh",
