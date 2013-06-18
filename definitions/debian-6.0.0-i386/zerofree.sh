@@ -1,1 +1,0 @@
-../.debian_6/zerofree.sh
