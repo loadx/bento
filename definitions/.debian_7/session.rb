@@ -19,7 +19,8 @@ DEBIAN_7_SESSION =
                            '<Enter>'
                          ],
                          :os_type_id => 'Debian_64',
-                         :postinstall_files => [ "update.sh", 
+                         :postinstall_files => [ "apt_lang_remove.sh",
+                                                 "update.sh", 
                                                  "sbin_fix.sh",
                                                  "virtualbox.sh",
                                                  "vagrant.sh",
