@@ -6,6 +6,6 @@ session =
   DEBIAN_7_SESSION.merge(:os_type_id => 'Debian',
                         :iso_file => iso,
                         :iso_md5 => "a6b93666a5393334accb7ac4ee28d949",
-                        :iso_src => "http://server.local/ISOs/Debian/#{iso}")
+                        :iso_src => "http://cdimage.debian.org/debian-cd/7.0.0/amd64/iso-cd/#{iso}")
 
 Veewee::Session.declare session
