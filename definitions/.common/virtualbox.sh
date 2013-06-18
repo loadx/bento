@@ -6,7 +6,10 @@ if test -f /etc/init.d/virtualbox-ose-guest-utils ; then
 fi
 
 # remove any existing packages
-rmmod vboxguest
+if [ -z $(lsmod | grep "vboxguest") ]; then
+    rmmod vboxguest
+fi
+
 aptitude -y purge virtualbox-ose-guest-x11 virtualbox-ose-guest-dkms virtualbox-ose-guest-utils
 
 # Install dkms for dynamic compiles
