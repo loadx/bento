@@ -1,3 +1,5 @@
+# Bento 
+
 Bento is a project that encapsulates
 [Veewee](https://github.com/jedi4ever/veewee/) definitions for
 building [Vagrant](http://vagrantup.com) baseboxes. Originally created by opscode for use with [cookbooks](http://community.opscode.com/users/Opscode).
@@ -7,41 +9,63 @@ These basebox definitions are originally based on
 make "Don't Repeat Yourself" (DRY) modular baseboxes. Thanks Tim!
 
 ## Current Baseboxes
-debian-6.0.0 (i386) 	
-debian-7.0.0 (i386)
-debian-7.0.0 (x64)
 
-# Getting Started
+* debian-6.0.0 (i386)
+* debian-7.0.0 (i386)
+* debian-7.0.0 (x64)
+* ubuntu-12.04 (x64)
+
+## Getting Started
 
 First, clone the project, then install the required Gems with Bundler.
-
+```bash
     $ git clone git://github.com/opscode/bento.git
     $ cd bento
-    $ bundle install --binstubs
+    $ bundle install --path=.gems
+```
 
+Next install Polipo using your favorite package manager or from source
+```bash
+   $ brew -v install polipo
+```
+
+Customise polipo's config to your choosing. 
+
+**_You should leave the port as the default 8123_**
+<br /><em>If you want to change this you will need to update the preseed values accordingly</em>
+
+
+Now start polipo
+```bash
+    $ polipo -c /path/to/your/config
+```
+
+Back in Bento
 List available baseboxes that can be built:
-
-    $ bundle exec vagrant basebox list
+```bash
+    $ bundle exec veewee list
+```
 
 Build, for example, the debian-7.0.0 basebox.
-
-    $ bundle exec vagrant basebox build debian-7.0.0
-
+```bash
+    $ bundle exec veewee build debian-7.0.0
+```
 
 Aside from that, the basebox should be ready to use. Export it:
+```bash
+    $ bundle exec veewee export debian-7.0.0
+```
 
-    $ bundle exec vagrant basebox export ubuntu-12.04
-
-Congratulations! You now have `./ubuntu-12.04.box`, a fully functional
+Congratulations! You now have `./debian7.0.0.box`, a fully functional
 basebox that you can then add to Vagrant and start testing cookbooks.
 
-# How It Works
+## How It Works
 
 Veewee reads the definition specified and automatically builds a
 VirtualBox machine. The VirtualBox guest additions and the target OS
 ISO are downloaded into the `iso/` directory.
 
-# Definitions
+## Definitions
 
 The definitions themselves are split up into directories that get
 symlinked into specific basebox directories.
@@ -59,6 +83,7 @@ Everything else should be considered specific to the environment's combination.
 License and Authors
 ===================
 
+- Author:: Mat Brennan (loadx.mat@gmail.com)
 - Author:: Seth Chisamore (<schisamo@opscode.com>)
 - Author:: Stephen Delano (<stephen@opscode.com>)
 - Author:: Joshua Timberman (<joshua@opscode.com>)
