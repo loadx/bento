@@ -28,6 +28,6 @@ DEBIAN_7_SESSION =
                                                  "sudoers.sh",
                                                  "cleanup.sh",
                                                  "minimize.sh",
-                                                 "zerofree.sh"],
+                                                 "compress_disk.sh"],
                          :kickstart_file => "preseed.cfg",
                          :shutdown_cmd => "/sbin/shutdown -h -P now" })
