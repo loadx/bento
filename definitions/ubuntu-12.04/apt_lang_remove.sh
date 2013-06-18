@@ -1,0 +1,1 @@
+../.ubuntu/apt_lang_remove.sh
