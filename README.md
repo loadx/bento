@@ -43,17 +43,17 @@ Now start polipo
 Back in Bento
 List available baseboxes that can be built:
 ```bash
-    $ bundle exec veewee list
+    $ bundle exec veewee <provider> list
 ```
 
 Build, for example, the debian-7.0.0 basebox.
 ```bash
-    $ bundle exec veewee build debian-7.0.0
+    $ bundle exec veewee <provider> build debian-7.0.0
 ```
 
 Aside from that, the basebox should be ready to use. Export it:
 ```bash
-    $ bundle exec veewee export debian-7.0.0
+    $ bundle exec veewee <provider> export debian-7.0.0
 ```
 
 Congratulations! You now have `./debian7.0.0.box`, a fully functional
