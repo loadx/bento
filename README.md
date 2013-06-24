@@ -13,7 +13,10 @@ make "Don't Repeat Yourself" (DRY) modular baseboxes. Thanks Tim!
 * debian-6.0.0 (i386)
 * debian-7.0.0 (i386)
 * debian-7.0.0 (x64)
+* debian-7.1.0 (i386)
 * ubuntu-12.04 (x64)
+* ubuntu-12.10 (i386)
+* ubuntu-13.04 (x64)
 
 ## Getting Started
 
@@ -43,17 +46,17 @@ Now start polipo
 Back in Bento
 List available baseboxes that can be built:
 ```bash
-    $ bundle exec veewee list
+    $ bundle exec veewee <provider> list
 ```
 
 Build, for example, the debian-7.0.0 basebox.
 ```bash
-    $ bundle exec veewee build debian-7.0.0
+    $ bundle exec veewee <provider> build debian-7.0.0
 ```
 
 Aside from that, the basebox should be ready to use. Export it:
 ```bash
-    $ bundle exec veewee export debian-7.0.0
+    $ bundle exec veewee <provider> export debian-7.0.0
 ```
 
 Congratulations! You now have `./debian7.0.0.box`, a fully functional
@@ -83,6 +86,7 @@ Everything else should be considered specific to the environment's combination.
 License and Authors
 ===================
 
+- Author:: Andy Zhang (aibieliandy@gmail.com)
 - Author:: Mat Brennan (loadx.mat@gmail.com)
 - Author:: Seth Chisamore (<schisamo@opscode.com>)
 - Author:: Stephen Delano (<stephen@opscode.com>)
