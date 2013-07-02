@@ -3,7 +3,7 @@
 # stop translations from being downloaded with apt-update
 CONF_FILE=/etc/apt/apt.conf.d/99translations
 if [ ! -f $CONF_FILE ]; then
-    echo -e 'Acquire::Languages "none";' >> $CONF_FILE
+    echo 'Acquire::Languages "none";' >> $CONF_FILE
 fi
 
 # remove apt lists
