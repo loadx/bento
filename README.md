@@ -13,7 +13,11 @@ make "Don't Repeat Yourself" (DRY) modular baseboxes. Thanks Tim!
 * debian-6.0.0 (i386)
 * debian-7.0.0 (i386)
 * debian-7.0.0 (x64)
+* debian-7.1.0 (i386)
 * ubuntu-12.04 (x64)
+* ubuntu-12.10 (i386)
+* ubuntu-13.04 (x64)
+
 
 ## Getting Started
 
@@ -83,6 +87,7 @@ Everything else should be considered specific to the environment's combination.
 License and Authors
 ===================
 
+- Author:: Andy Zhang (aibieliandy@gmail.com) 
 - Author:: Mat Brennan (loadx.mat@gmail.com)
 - Author:: Seth Chisamore (<schisamo@opscode.com>)
 - Author:: Stephen Delano (<stephen@opscode.com>)
