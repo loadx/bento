@@ -1,1 +1,0 @@
-../.common/compress_disk.sh

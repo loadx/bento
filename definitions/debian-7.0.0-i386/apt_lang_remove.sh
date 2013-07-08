@@ -1,1 +1,0 @@
-../.debian_7/apt_lang_remove.sh
