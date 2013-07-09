@@ -10,12 +10,7 @@ make "Don't Repeat Yourself" (DRY) modular baseboxes. Thanks Tim!
 
 ## Current Baseboxes
 
-* debian-6.0.0 (i386)
-* debian-7.0.0 (i386)
-* debian-7.0.0 (x64)
-* debian-7.1.0 (i386)
 * ubuntu-12.04 (x64)
-* ubuntu-12.10 (i386)
 * ubuntu-13.04 (x64)
 
 
